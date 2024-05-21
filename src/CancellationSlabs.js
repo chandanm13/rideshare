@@ -4,7 +4,7 @@ import React from 'react';
 const CancellationSlabs = () => {
   return (
     <div>
-      <h2>Cancellation Slabs Page</h2>
+      <h2>supsup</h2>
       {/* Add your content here */}
     </div>
   );
