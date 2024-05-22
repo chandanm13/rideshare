@@ -1,7 +1,6 @@
-// VehicleTypeTable.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'rideshare/src/App.css';
+import 'C:/Users/chandan/Desktop/RideShare/rideshare/src/App.css';
 
 const VehicleTypeTable = () => {
   const vehicleTypes = [
@@ -44,50 +43,62 @@ const VehicleTypeTable = () => {
   ];
 
   return (
-    <div className="vehicle-type-table">
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Image</th>
-            <th>Base Fare</th>
-            <th>Distance Rate Per (Km or Mile)</th>
-            <th>Rate Per Hour</th>
-            <th>Minimum Fare</th>
-            <th>Convenience Fees</th>
-            <th>Convenience Fee Type</th>
-            <th>Fleet/Admin Commission</th>
-            <th>Extra Information</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {vehicleTypes.map((vehicle, index) => (
-            <tr key={index}>
-              <td>{vehicle.name}</td>
-              <td><img src={vehicle.image} alt={vehicle.name} /></td>
-              <td>{vehicle.baseFare}</td>
-              <td>{vehicle.distanceRate}</td>
-              <td>{vehicle.ratePerHour}</td>
-              <td>{vehicle.minimumFare}</td>
-              <td>{vehicle.convenienceFees}</td>
-              <td>{vehicle.convenienceFeeType}</td>
-              <td>{vehicle.fleetAdminCommission}</td>
-              <td>{vehicle.extraInfo}</td>
-              <td>
-                <Link to="/cancellation-slabs">
-                  <button>Cancellation Slabs</button>
-                </Link>
-                <Link to="/edit-vehicle">
-                  <button>Edit</button>
-                </Link>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="container">
+      <div className="dashboard">
+        <h2>Dashboard</h2>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/vehicle-type-table">Vehicle Types</Link>
+          </li>
+        </ul>
+      </div>
+      <div className="content">
+        <h1>Vehicle Types</h1>
+        <div className="vehicle-type-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Base Fare</th>
+                <th>Distance Rate Per (Km or Mile)</th>
+                <th>Rate Per Hour</th>
+                <th>Minimum Fare</th>
+                <th>Convenience Fees</th>
+                <th>Convenience Fee Type</th>
+                <th>Fleet/Admin Commission</th>
+                <th>Extra Information</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {vehicleTypes.map((vehicle, index) => (
+                <tr key={index}>
+                  <td>{vehicle.name}</td>
+                  <td><img src={vehicle.image} alt={vehicle.name} /></td>
+                  <td>{vehicle.baseFare}</td>
+                  <td>{vehicle.distanceRate}</td>
+                  <td>{vehicle.ratePerHour}</td>
+                  <td>{vehicle.minimumFare}</td>
+                  <td>{vehicle.convenienceFees}</td>
+                  <td>{vehicle.convenienceFeeType}</td>
+                  <td>{vehicle.fleetAdminCommission}</td>
+                  <td>{vehicle.extraInfo}</td>
+                  <td>
+                    <button>Cancellation Slabs</button>
+                    <button>Edit</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default VehicleTypeTable;
