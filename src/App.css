@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: row;
   height: 100vh;
+  background-image: url('bg.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .dashboard {
@@ -56,7 +60,7 @@
   font-weight: bold;
 }
 
-.vehicle-type-table tr:nth-child(even) {
+.vehicle-type-table tr {
   background-color: #f2f2f2;
 }
 
@@ -81,4 +85,20 @@
 
 .vehicle-type-table button:hover {
   background-color: #3e8e41;
+}
+.dashboard li {
+  margin-bottom: 10px;
+}
+
+.dashboard .logout-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.dashboard .logout-button:hover {
+  background-color: #4CAF50;
 }

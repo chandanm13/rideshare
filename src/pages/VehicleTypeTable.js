@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import 'C:/Users/chandan/Desktop/RideShare/rideshare/src/App.css';
 
 const VehicleTypeTable = () => {
+  const handleLogout = () => {
+    // Add your logout logic here, e.g., clearing authentication tokens
+    console.log('User logged out');
+  };
+
   const vehicleTypes = [
     {
       name: 'Economy',
@@ -54,6 +59,9 @@ const VehicleTypeTable = () => {
             <Link to="/vehicle-type-table">Vehicle Types</Link>
           </li>
         </ul>
+        <button className="logout-button" onClick={handleLogout}>
+          Logout
+        </button>
       </div>
       <div className="content">
         <h1>Vehicle Types</h1>
@@ -78,7 +86,7 @@ const VehicleTypeTable = () => {
               {vehicleTypes.map((vehicle, index) => (
                 <tr key={index}>
                   <td>{vehicle.name}</td>
-                  <td><img src={vehicle.image} alt={vehicle.name} /></td>
+                  <td><img src={vehicle.image} alt={vehicle.name} /></td> 
                   <td>{vehicle.baseFare}</td>
                   <td>{vehicle.distanceRate}</td>
                   <td>{vehicle.ratePerHour}</td>
