@@ -24,8 +24,10 @@ const Home = () => {
         </button>
       </div>
       <div className="content">
-        <h1>Welcome to the Home Page</h1>
-        <p>This is the home page of the application.</p>
+        <h1>RideShare</h1>
+        <p>We're excited to bring convenience, sustainability, and community together with our innovative carpooling platform.</p>
+        <p>By sharing rides, we're not just saving time and money, but also reducing our carbon footprint.</p> 
+        <p>Join us in creating a greener, more connected future, one ride at a time.</p>
       </div>
     </div>
   );

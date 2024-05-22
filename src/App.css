@@ -102,3 +102,18 @@
 .dashboard .logout-button:hover {
   background-color: #4CAF50;
 }
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  color: #333; /* Example color */
+}
+
+.content p {
+  font-size: 1.4em;
+  line-height: 1.5;
+  color: #000000; /* Example color */
+}
