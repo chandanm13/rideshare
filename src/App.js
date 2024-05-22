@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import VehicleTypeTable from './VehicleTypeTable';
+import VehicleTypeTable from './pages/VehicleTypeTable';
 import CancellationSlabs from './CancellationSlabs'; // Create this component
 import EditVehicle from './EditVehicle'; // Create this component
 
@@ -19,6 +19,7 @@ function App() {
         </header>
       </div>
     </Router>
+    
   );
 }
 

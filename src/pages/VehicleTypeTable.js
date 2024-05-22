@@ -1,7 +1,7 @@
 // VehicleTypeTable.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './VehicleTypeTable.css';
+import 'rideshare/src/App.css';
 
 const VehicleTypeTable = () => {
   const vehicleTypes = [
