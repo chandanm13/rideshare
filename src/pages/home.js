@@ -13,10 +13,16 @@ const Home = () => {
         <h2>Dashboard</h2>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"><h4>Home</h4></Link>
           </li>
           <li>
             <Link to="/vehicle-type-table">Vehicle Types</Link>
+          </li>
+          <li>
+            <Link to="/my-bookings">My Bookings</Link>
+          </li>
+          <li>
+            <Link to="/cars">Cars</Link>
           </li>
         </ul>
         <button className="logout-button" onClick={handleLogout}>

@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'C:/Users/chandan/Desktop/RideShare/rideshare/src/App.css';
+import economyImage from 'C:/Users/chandan/Desktop/RideShare/rideshare/src/images/economy.jpg';
+import comfortImage from 'C:/Users/chandan/Desktop/RideShare/rideshare/src/images/comfort.jpg';
+import exclusiveImage from 'C:/Users/chandan/Desktop/RideShare/rideshare/src/images/exclusive.jpg';
+
 
 const VehicleTypeTable = () => {
   const handleLogout = () => {
-    // Add your logout logic here, e.g., clearing authentication tokens
     console.log('User logged out');
   };
 
   const vehicleTypes = [
     {
       name: 'Economy',
-      image: 'path/to/economy-image.png', // Replace with the actual path
+      image: economyImage,
       baseFare: 10,
       distanceRate: 5,
       ratePerHour: 5,
@@ -23,7 +26,7 @@ const VehicleTypeTable = () => {
     },
     {
       name: 'Comfort',
-      image: 'path/to/comfort-image.png', // Replace with the actual path
+      image: comfortImage, 
       baseFare: 12,
       distanceRate: 8,
       ratePerHour: 6,
@@ -35,7 +38,7 @@ const VehicleTypeTable = () => {
     },
     {
       name: 'Exclusive',
-      image: 'path/to/exclusive-image.png', // Replace with the actual path
+      image: exclusiveImage, 
       baseFare: 15,
       distanceRate: 10,
       ratePerHour: 8,
@@ -56,7 +59,13 @@ const VehicleTypeTable = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/vehicle-type-table">Vehicle Types</Link>
+            <Link to="/vehicle-type-table"><h4>Vehicle Types</h4></Link>
+          </li>
+          <li>
+            <Link to="/my-bookings">My Bookings</Link>
+          </li>
+          <li>
+            <Link to="/cars">Cars</Link>
           </li>
         </ul>
         <button className="logout-button" onClick={handleLogout}>
@@ -86,8 +95,7 @@ const VehicleTypeTable = () => {
               {vehicleTypes.map((vehicle, index) => (
                 <tr key={index}>
                   <td>{vehicle.name}</td>
-                  <td><img src={vehicle.image} alt={vehicle.name} /></td> 
-                  <td>{vehicle.baseFare}</td>
+                  <td><img src={vehicle.image} alt={vehicle.name} className="vehicle-image" /></td>                  <td>{vehicle.baseFare}</td>
                   <td>{vehicle.distanceRate}</td>
                   <td>{vehicle.ratePerHour}</td>
                   <td>{vehicle.minimumFare}</td>
