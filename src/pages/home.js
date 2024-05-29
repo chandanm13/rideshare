@@ -1,6 +1,7 @@
+// src/pages/Home.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'C:/Users/chandan/Desktop/RideShare/rideshare/src/App.css';
+import '../App.css';
 
 const Home = () => {
   const handleLogout = () => {

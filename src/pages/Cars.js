@@ -1,38 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import 'C:/Users/chandan/Desktop/RideShare/rideshare/src/App.css';
+import axios from 'axios'; // Import axios
+import 'C:/Users/chandan/Desktop/RideShare/frontend/rideshare/src/App.css';
 
 const Cars = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    const Data = [
-      {
-        createDate: '2024-05-01',
-        driver: 'John Doe',
-        vehicleType: 'Sedan',
-        registrationNumber: 'ABC123',
-        brandName: 'Toyota',
-        modelNumber: 'Camry',
-        otherInfo: 'N/A',
-        image: 'N/A',
-        activeStatus: 'Active',
-        approved: 'Yes'
-      },
-      {
-        createDate: '2024-05-02',
-        driver: 'Jane Smith',
-        vehicleType: 'SUV',
-        registrationNumber: 'XYZ456',
-        brandName: 'Honda',
-        modelNumber: 'CRV',
-        otherInfo: 'N/A',
-        image: 'N/A',
-        activeStatus: 'Inactive',
-        approved: 'No'
-      }
-    ];
-    setCars(Data);
+    axios.get('http://localhost:8000/cars')
+      .then(response => {
+        setCars(response.data);
+      })
+      .catch(error => {
+        console.error("There was an error fetching the cars!", error);
+      });
   }, []);
 
   const handleLogout = () => {

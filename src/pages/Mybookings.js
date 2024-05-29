@@ -1,41 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import 'C:/Users/chandan/Desktop/RideShare/rideshare/src/App.css';
+import axios from 'axios'; // Import axios
+import 'C:/Users/chandan/Desktop/RideShare/frontend/rideshare/src/App.css';
 
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    const Data = [
-      {
-        reference: 'BK001',
-        date: '2024-05-01',
-        vehicleType: 'Sedan',
-        driver: 'John Doe',
-        status: 'Confirmed',
-        otp: '1234',
-        cost: '25.00'
-      },
-      {
-        reference: 'BK002',
-        date: '2024-05-02',
-        vehicleType: 'SUV',
-        driver: 'Jane Smith',
-        status: 'Pending',
-        otp: '5678',
-        cost: '35.00'
-      },
-      {
-        reference: 'BK003',
-        date: '2024-05-03',
-        vehicleType: 'Hatchback',
-        driver: 'Mike Johnson',
-        status: 'Cancelled',
-        otp: '9012',
-        cost: '15.00'
-      }
-    ];
-    setBookings(Data);
+    axios.get('http://localhost:8000/bookings')
+      .then(response => {
+        setBookings(response.data);
+      })
+      .catch(error => {
+        console.error("There was an error fetching the bookings!", error);
+      });
   }, []);
 
   const handleLogout = () => {
