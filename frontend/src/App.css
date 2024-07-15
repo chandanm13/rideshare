@@ -1,0 +1,254 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-image: url('C:/Users/chandan/Desktop/RideShare/frontend/src/images/bg.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+.vehicle-image {
+  width: 50px;
+  height: auto;
+}
+
+
+.dashboard {
+  width: 200px;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.dashboard h2 {
+  margin-top: 0;
+}
+
+.dashboard ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard li {
+  margin-bottom: 10px;
+}
+
+.dashboard a {
+  text-decoration: none;
+  color: #333;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.vehicle-type-table {
+  margin-top: 20px;
+}
+
+.vehicle-type-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.vehicle-type-table th,
+.vehicle-type-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.vehicle-type-table th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.vehicle-type-table tr {
+  background-color: #f2f2f2;
+}
+
+.vehicle-type-table tr:hover {
+  background-color: #ddd;
+}
+
+.vehicle-type-table td:last-child {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vehicle-type-table button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vehicle-type-table button:hover {
+  background-color: #3e8e41;
+}
+.dashboard li {
+  margin-bottom: 10px;
+}
+
+.dashboard .logout-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.dashboard .logout-button:hover {
+  background-color: #4CAF50;
+}
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  color: #333; /* Example color */
+}
+
+.content p {
+  font-size: 1.4em;
+  line-height: 1.5;
+  color: #000000; /* Example color */
+}
+/* MyBookings.css */
+.my-bookings {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.my-bookings h1 {
+  margin-bottom: 20px;
+}
+
+.my-bookings table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.my-bookings th,
+.my-bookings td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.my-bookings th {
+  background-color: #f4f4f4;
+}
+
+.my-bookings .no-records {
+  text-align: center;
+}
+.my-bookings tr {
+  background-color: #f2f2f2;
+}
+
+.my-bookings tr:hover {
+  background-color: #ddd;
+}
+.my-bookings button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.my-bookings th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.my-bookings button:hover {
+  background-color: #3e8e41;
+}
+.slide-enter {
+  opacity: 0;
+  transform: translateX(100%) scale(0.9) rotateY(30deg);
+  filter: blur(5px);
+}
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0) scale(1) rotateY(0);
+  filter: blur(0);
+  transition: opacity 800ms ease-out, transform 800ms ease-out, filter 800ms ease-out;
+}
+
+.slide-exit {
+  opacity: 1;
+  transform: translateX(0) scale(1) rotateY(0);
+  filter: blur(0);
+}
+
+.slide-exit-active {
+  opacity: 0;
+  transform: translateX(-100%) scale(0.9) rotateY(30deg);
+  filter: blur(10px);
+  transition: opacity 800ms ease-in, transform 800ms ease-in, filter 800ms ease-in;
+}
+/* Cars.css */
+.cars {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cars h1 {
+  margin-bottom: 20px;
+}
+
+.cars table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cars th,
+.cars td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.cars th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.cars .no-records {
+  text-align: center;
+}
+
+.cars tr {
+  background-color: #f2f2f2;
+}
+
+.cars tr:hover {
+  background-color: #ddd;
+}
+
+.cars button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cars button:hover {
+  background-color: #3e8e41;
+}
+
