@@ -1,10 +1,21 @@
 {
   "dependencies": {
+    "aws-amplify": "^6.4.0",
     "axios": "^1.7.2",
     "expo": "^51.0.8",
     "expo-apple-authentication": "~6.4.1",
     "jwt-decode": "^4.0.0",
     "react-apple-login": "^1.1.6",
     "react-facebook-login": "^4.1.1"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.0.4",
+    "@aws-amplify/backend-cli": "^1.1.0",
+    "aws-cdk": "^2.149.0",
+    "aws-cdk-lib": "^2.149.0",
+    "constructs": "^10.3.0",
+    "esbuild": "^0.23.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
   }
 }
